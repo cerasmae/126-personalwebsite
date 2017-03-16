@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="description" content="Personal Website">	
+		<meta name="keywords" content="Moon lover, dreamer, n00b 8-bit artist">
+		<meta name="author" content="Mae Celine Erasmo">
+
+
+
+
+
+		<style type="text/css">
+
+			/*CSS ELEMENTS*/
+			body{
+				height: 100%;
+			}
+
+			p,
+			body,
+			img {
+				margin: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			@font-face {
+				font-family: PressStart2P;
+				src: url(PressStart2P.ttf);
+			}
+
+
+			@font-face {
+				font-family: ThinPixel;
+				src: url(thin_pixel-7.ttf);
+			}
+
+			h1 {
+				font-family: PressStart2P;
+				font-size: 5vw;
+				margin-top: 20%;
+			}
+
+			ul {
+				list-style-type: none;
+				margin-top: 25%;
+				margin-bottom: 25%;
+				padding: 0;
+				width: 100%;
+			}
+
+			li a {
+				text-align: center;
+				display: block;
+				width: 100%;
+				font-family: ThinPixel;
+				font-size: 5.5vw;
+				text-decoration: none;
+				color: black;
+			}
+
+			li a:hover{
+				color: white;
+			}
+
+			li a.button-home:hover {
+				 background-color: #ffd67c;
+			}
+
+			li a.button-aboutme:hover {
+				 background-color: #282e54;
+			}
+
+			li a.button-skills:hover {
+				 background-color: #787492;
+			}
+
+			li a.button-friends:hover {
+				 background-color: #b093a3;
+			}
+
+			li a.button-misc:hover {
+				 background-color: #353454;
+			}
+
+			li a.button-rickandmorty:hover {
+				 background-color: #d6b2a5;
+			}
+
+			/*ID ELEMENTS*/
+			#aboutme-contents{
+				font-family: ThinPixel;
+				color: white;
+				font-size: 48px;
+
+			}
+
+			/*CSS CLASS*/
+			.container-div{
+				position: relative;
+				width: 90%;
+				height: 100%;
+				padding-left: 5%;
+			    padding-right: 5%;
+			    padding-top: 0;
+			    overflow: hidden;
+			}
+
+			/*ALL DIV ONE RELATED*/
+			#home {
+				background-color: #ffdd91;
+			}
+
+			/*ALL DIV TWO RELATED*/
+			#aboutme {
+				background-color: #282e54;
+			}
+
+			.aboutme-contents{
+				margin-top: 10%;
+				margin-bottom: 10%;
+			}
+
+			.moon-pic,
+			.briefcase-pic {
+				margin-top: 10%;
+			}
+
+			#parent-moon:hover #moon-hover,
+			#parent-briefcase:hover #briefcase-hover{
+				display: block;
+				transition: visibility 0s, opacity 0.5s linear;
+				opacity: 1;
+			}
+
+			#moon-hover,
+			#briefcase-hover{
+				display: none;
+				opacity: 0;
+			}
+
+			#briefcase-p{
+				border: 0;
+			}
+
+			/*ALL DIV THREE RELATED*/
+			#skills {
+				background-color: #787492;
+				overflow-x: auto;
+			}
+
+			#div-programs,
+			#div-friends {
+				margin-top: 5%;
+				margin-bottom: 5%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5%;
+			}
+
+			#c-pic,
+			#cpp-pic,
+			#lua-pic,
+			#java-pic,
+			#htmlcss-pic {
+				width: 225px;
+    			margin: 5%;
+			}
+
+			/*ALL DIV FOUR RELATED*/
+			#friends {
+				background-color: #b093a3;
+				overflow: scroll;
+				overflow-x: auto;
+			}
+
+			#arje-pic,
+			#trish-pic,
+			#alfie-pic,
+			#mon-pic,
+			#heidi-pic,
+			#justine-pic,
+			#kelly-pic {
+				max-width: 200px;
+				margin: 2.5%;
+			}
+
+
+			/*ALL DIV FIVE RELATED*/
+			#rickandmorty {
+				background-color: #353454;
+				overflow: auto;
+				overflow-x: hidden;
+			}
+
+			/*ALL DIV SIX RELATED*/
+			#miscellaneous {
+				background-color: #d6b2a5;
+			}
+
+			.ram-gallery{
+				margin: 10%;
+			}
+
+			.ram-pic-gal{
+				width: 100%;
+			}
+
+			.me-pic{
+				border-radius: 50%;
+				width: 50%;
+				height: 50%;
+			}
+
+			.ram-pic{
+				width: 35%;
+				height: 35%;
+				margin-bottom: 10%;
+			}
+
+			.h1-two, .h1-five{
+				color: #f9f7f5;
+			}
+
+			.div-float {
+				position: fixed;
+				width: 70px;
+			  	height: 70px;
+				bottom: 35px;
+				right: 35px;
+				z-index: 999;
+			}
+
+			.button-float{
+				border-radius: 50%;
+				width: 75px;
+				height: 75px;
+				border: none;
+				background-color: black;
+			 	box-shadow: 0px 2px 5px #666;
+			}
+
+			#misc{
+				margin-top: 10%;
+				margin-bottom: 10%;
+				font-family: ThinPixel;
+				font-size: 55px;
+			}
+
+			/*MEDIA QUERIES*/
+
+			@media screen and (min-width: 750px){
+
+				h1 {
+					font-size: 30px;
+				}
+
+				li a {
+					font-size: 55px;
+				}
+
+				.container-div{
+					width: 35%;
+				    height: 80em;
+				    padding-left: 5%;
+				    padding-right: 5%;
+				    padding-top: 2.5%;
+				}
+
+				#home,
+				#skills,
+				#rickandmorty {
+					right: 50%;
+				    float: right;
+				}
+
+				#aboutme,
+				#friends,
+				#miscellaneous {
+					float: left;
+					left: 50%;
+				}
+			}
+
+		</style>
+
+		<meta charset="UTF-8" name="viewport" content="width=device-width">
+		<title> ♥🌜 Mortyfied </title>
+
+	</head>
+
+<body>
+
+	<div class="div-float">
+		<a href="#">
+			<button class="button-float">
+				<img class="up-pic" src="images/up.png" alt="Up" width="55px">
+			</button>
+		</a> 
+	</div>
+
+	<!-- DIV ONE -->
+	<div class="container-div" id="home">
+
+		<h1 class="h1-one"> <center> ♥🌜Mortyfied </center> </h1>
+
+		<div class="one-nav">
+			<ul>
+				<li>
+					<a href="#" class="button-home"> Home </a> 
+				</li>
+				<li>
+					<a href="#aboutme" class="button-aboutme"> About Me </a> 
+				</li>
+				<li>
+					<a href="#skills" class="button-skills"> Skills </a>
+				</li>
+				<li>
+					<a href="#friends" class="button-friends"> Friends </a>
+				</li>
+				<li>
+					<a href="#rickandmorty" class="button-rickandmorty"> Rick and Morty </a> 
+				</li>
+			</ul>
+
+			
+		</div>
+	</div>
+
+	<!-- DIV TWO -->
+	<div class="container-div" id="aboutme">
+		<center>
+		<h1 class="h1-two"> About Me </h1>
+		<br>
+		<img class="me-pic" src="images/me.png" alt="Me" width="300">
+		</center>
+
+		<div id="aboutme-contents">	
+			<center>
+				<div id="parent-briefcase">
+					<img class="briefcase-pic" src="images/briefcase.png" alt="Briefcase" width="150">
+					<div id="briefcase-hover">
+						<!-- <p id="briefcase-p"> -->
+							Mae Celine C. Erasmo. 
+							<br>
+							BS Computer Science III.
+							<br>
+							University of the Philippines, Cebu.
+							<br>
+							mae.celinerasmo@gmail.com
+						<!-- </p> -->
+					</div>
+				</div>
+
+				<div id="parent-moon">
+					<img class="moon-pic" src="images/moon.png" alt="Moon" width="150">
+					<div id="moon-hover">
+						<p>
+							INFP. Dreamer. Moon lover. Wannabe poet. Awkward potato. N00b 8-bit "artist".
+						</p>
+					</div>
+				</div>
+			</center>
+		</div>
+
+	</div>
+	
+
+	<!-- DIV THREE -->
+	<div class="container-div" id="skills">
+		<center>
+			<h1 class="h1-three"> Skills </h1>
+		</center>
+		<div id="div-programs">
+			<center>
+				<img id="c-pic" src="images/cprog.png" alt="C Programming" title="C Programming">
+				<img id="cpp-pic" src="images/cpp.png" alt="C++ Programming" title="C++ Programming">
+				<img id="lua-pic" src="images/corona.png" alt="Corona Lua" title="Corona Lua">
+				<img id="java-pic" src="images/java.png" alt="Java" title="Java">
+				<img id="htmlcss-pic" src="images/htmlcss.png" alt="Html/Css" title="Html/Css">
+			</center>
+		</div>
+	</div>
+
+	<!-- DIV FOUR -->
+	<div class="container-div" id="friends">
+		<center>
+			<h1 class="h1-four"> Friends </h1>
+		</center>
+		<div id="div-friends">
+			<center>
+				<img id="trish-pic" src="images/arje.png" alt="Trisha Butas" title="Trisha Butas">
+				<img id="alfie-pic" src="images/alfie.png" alt="Alfie Salvacion" title="Alfie Salvacion">
+				<img id="justine-pic" src="images/justine.png" alt="Justine Navaja" title="Justine Navaja">
+				<img id="arje-pic" src="images/arje.png" alt="Arjemariel Requina" title="Arjemariel Requina">
+				<img id="mon-pic" src="images/mon.png" alt="Monique Meguillo" title="Monique Meguillo">
+				<img id="heidi-pic" src="images/heidi.png" alt="Heidi Chiu" title="Heidi Chiu">
+				<img id="kelly-pic" src="images/kelly.png" alt="Kelly Marinduque" title="Kelly Marinduque">
+			</center>
+		</div>
+	</div>
+
+
+
+	<!-- DIV FIVE -->
+
+	<div class="container-div" id="rickandmorty">
+		<center>
+			<h1 class="h1-five"> Rick and Morty </h1>
+			<img class="ram-pic" src="images/rickandmorty.png" alt="Rick and Morty" width="100px">
+
+			<div id="ram-gallery">
+
+				<img class="ram-pic-gal" src="images/ram3.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram5.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram8.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram10.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram11.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram12.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram21.png" alt="Rick and Morty">
+
+			</div>
+		</center>
+	</div>
+
+
+	<!-- DIV SIX -->
+	<div class="container-div" id="miscellaneous">
+		<center>
+			<p id="misc"> "And the ones who come close but do not love us, <br>
+			cannot love us, I'd say to let them pass through <br>
+			painlessly, rivers of dust through a window. <br>
+			They have nothing to do with you." <br>
+			<br>
+			<br>
+			- Naomi Shihab Nye </p>
+		</center>
+	</div>
+
+</body>
+
+</html>
