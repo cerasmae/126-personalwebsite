@@ -91,14 +91,8 @@
 
 			}
 
-
 			/*CSS CLASS*/
-			.div-one, 
-			.div-two,
-			.div-three, 
-			.div-four, 
-			.div-five, 
-			.div-six {
+			.container-div{
 				position: relative;
 				width: 90%;
 				height: 100%;
@@ -109,12 +103,12 @@
 			}
 
 			/*ALL DIV ONE RELATED*/
-			.div-one {
+			#home {
 				background-color: #ffdd91;
 			}
 
 			/*ALL DIV TWO RELATED*/
-			.div-two {
+			#aboutme {
 				background-color: #282e54;
 			}
 
@@ -146,9 +140,8 @@
 			}
 
 			/*ALL DIV THREE RELATED*/
-			.div-three {
+			#skills {
 				background-color: #787492;
-				overflow: scroll;
 				overflow-x: auto;
 			}
 
@@ -168,15 +161,11 @@
 			#java-pic,
 			#htmlcss-pic {
 				width: 225px;
-				/*display: block;*/
-/*   	 			margin-left: auto;
-    			margin-right: auto;*/
     			margin: 5%;
-    			/*float: left;*/
 			}
 
 			/*ALL DIV FOUR RELATED*/
-			.div-four {
+			#friends {
 				background-color: #b093a3;
 				overflow: scroll;
 				overflow-x: auto;
@@ -191,19 +180,18 @@
 			#kelly-pic {
 				max-width: 200px;
 				margin: 2.5%;
-				/*float: left;*/
 			}
 
 
 			/*ALL DIV FIVE RELATED*/
-			.div-five {
+			#rickandmorty {
 				background-color: #353454;
 				overflow: auto;
 				overflow-x: hidden;
 			}
 
 			/*ALL DIV SIX RELATED*/
-			.div-six {
+			#miscellaneous {
 				background-color: #d6b2a5;
 			}
 
@@ -268,12 +256,7 @@
 					font-size: 55px;
 				}
 
-				.div-one, 
-				.div-two,
-				.div-three, 
-				.div-four, 
-				.div-five, 
-				.div-six {
+				.container-div{
 					width: 35%;
 				    height: 80em;
 				    padding-left: 5%;
@@ -281,16 +264,16 @@
 				    padding-top: 2.5%;
 				}
 
-				.div-one,
-				.div-three,
-				.div-five {
+				#home,
+				#skills,
+				#rickandmorty {
 					right: 50%;
 				    float: right;
 				}
 
-				.div-two,
-				.div-four,
-				.div-six {
+				#aboutme,
+				#friends,
+				#miscellaneous {
 					float: left;
 					left: 50%;
 				}
@@ -314,113 +297,103 @@
 	</div>
 
 	<!-- DIV ONE -->
-	<div class="div-one">
-		<!-- <div class="div1-contents"> -->
+	<div class="container-div" id="home">
 
-		<div class="one-header"> 
-			<h1 class="h1-one"> <center> ♥🌜Mortyfied </center> </h1>
+		<h1 class="h1-one"> <center> ♥🌜Mortyfied </center> </h1>
+
+		<div class="one-nav">
+			<ul>
+				<li>
+					<a href="#" class="button-home"> Home </a> 
+				</li>
+				<li>
+					<a href="#aboutme" class="button-aboutme"> About Me </a> 
+				</li>
+				<li>
+					<a href="#skills" class="button-skills"> Skills </a>
+				</li>
+				<li>
+					<a href="#friends" class="button-friends"> Friends </a>
+				</li>
+				<li>
+					<a href="#rickandmorty" class="button-rickandmorty"> Rick and Morty </a> 
+				</li>
+			</ul>
+
+			
 		</div>
-
-			<div class="one-nav">
-				<ul>
-					<li>
-						<a href="#" class="button-home"> Home </a> 
-					</li>
-					<li>
-						<a href="#aboutme" class="button-aboutme"> About Me </a> 
-					</li>
-					<li>
-						<a href="#skills" class="button-skills"> Skills </a>
-					</li>
-					<li>
-						<a href="#friends" class="button-friends"> Friends </a>
-					</li>
-					<li>
-						<a href="#rickandmorty" class="button-rickandmorty"> Rick and Morty </a> 
-					</li>
-				</ul>
-
-				
-			</div>
-		<!-- </div> -->
 	</div>
 
 	<!-- DIV TWO -->
-	<div class="div-two" id="aboutme">
-		<div class="div2-contents">
+	<div class="container-div" id="aboutme">
+		<center>
+		<h1 class="h1-two"> About Me </h1>
+		<br>
+		<img class="me-pic" src="images/me.png" alt="Me" width="300">
+		</center>
+
+		<div id="aboutme-contents">	
 			<center>
-			<h1 class="h1-two"> About Me </h1>
-			<br>
-			<img class="me-pic" src="images/me.png" alt="Me" width="300">
+				<div id="parent-briefcase">
+					<img class="briefcase-pic" src="images/briefcase.png" alt="Briefcase" width="150">
+					<div id="briefcase-hover">
+						<!-- <p id="briefcase-p"> -->
+							Mae Celine C. Erasmo. 
+							<br>
+							BS Computer Science III.
+							<br>
+							University of the Philippines, Cebu.
+							<br>
+							mae.celinerasmo@gmail.com
+						<!-- </p> -->
+					</div>
+				</div>
+
+				<div id="parent-moon">
+					<img class="moon-pic" src="images/moon.png" alt="Moon" width="150">
+					<div id="moon-hover">
+						<p>
+							INFP. Dreamer. Moon lover. Wannabe poet. Awkward potato. N00b 8-bit "artist".
+						</p>
+					</div>
+				</div>
 			</center>
-
-			<div id="aboutme-contents">	
-				<center>
-					<div id="parent-briefcase">
-						<img class="briefcase-pic" src="images/briefcase.png" alt="Briefcase" width="150">
-						<div id="briefcase-hover">
-							<!-- <p id="briefcase-p"> -->
-								Mae Celine C. Erasmo. 
-								<br>
-								BS Computer Science III.
-								<br>
-								University of the Philippines, Cebu.
-								<br>
-								mae.celinerasmo@gmail.com
-							<!-- </p> -->
-						</div>
-					</div>
-
-					<div id="parent-moon">
-						<img class="moon-pic" src="images/moon.png" alt="Moon" width="150">
-						<div id="moon-hover">
-							<p>
-								INFP. Dreamer. Moon lover. Wannabe poet. Awkward potato. N00b 8-bit "artist".
-							</p>
-						</div>
-					</div>
-				</center>
-			</div>
-
 		</div>
+
 	</div>
 	
 
 	<!-- DIV THREE -->
-	<div class="div-three" id="skills">
-		<div class="div3-contents">
+	<div class="container-div" id="skills">
+		<center>
+			<h1 class="h1-three"> Skills </h1>
+		</center>
+		<div id="div-programs">
 			<center>
-				<h1 class="h1-three"> Skills </h1>
+				<img id="c-pic" src="images/cprog.png" alt="C Programming" title="C Programming">
+				<img id="cpp-pic" src="images/cpp.png" alt="C++ Programming" title="C++ Programming">
+				<img id="lua-pic" src="images/corona.png" alt="Corona Lua" title="Corona Lua">
+				<img id="java-pic" src="images/java.png" alt="Java" title="Java">
+				<img id="htmlcss-pic" src="images/htmlcss.png" alt="Html/Css" title="Html/Css">
 			</center>
-			<div id="div-programs">
-				<center>
-					<img id="c-pic" src="images/cprog.png" alt="C Programming" title="C Programming">
-					<img id="cpp-pic" src="images/cpp.png" alt="C++ Programming" title="C++ Programming">
-					<img id="lua-pic" src="images/corona.png" alt="Corona Lua" title="Corona Lua">
-					<img id="java-pic" src="images/java.png" alt="Java" title="Java">
-					<img id="htmlcss-pic" src="images/htmlcss.png" alt="Html/Css" title="Html/Css">
-				</center>
-			</div>
 		</div>
 	</div>
 
 	<!-- DIV FOUR -->
-	<div class="div-four" id="friends">
-		<div class="div4-contents">
+	<div class="container-div" id="friends">
+		<center>
+			<h1 class="h1-four"> Friends </h1>
+		</center>
+		<div id="div-friends">
 			<center>
-				<h1 class="h1-four"> Friends </h1>
+				<img id="trish-pic" src="images/arje.png" alt="Trisha Butas" title="Trisha Butas">
+				<img id="alfie-pic" src="images/alfie.png" alt="Alfie Salvacion" title="Alfie Salvacion">
+				<img id="justine-pic" src="images/justine.png" alt="Justine Navaja" title="Justine Navaja">
+				<img id="arje-pic" src="images/arje.png" alt="Arjemariel Requina" title="Arjemariel Requina">
+				<img id="mon-pic" src="images/mon.png" alt="Monique Meguillo" title="Monique Meguillo">
+				<img id="heidi-pic" src="images/heidi.png" alt="Heidi Chiu" title="Heidi Chiu">
+				<img id="kelly-pic" src="images/kelly.png" alt="Kelly Marinduque" title="Kelly Marinduque">
 			</center>
-			<div id="div-friends">
-				<center>
-					<img id="trish-pic" src="images/arje.png" alt="Trisha Butas" title="Trisha Butas">
-					<img id="alfie-pic" src="images/alfie.png" alt="Alfie Salvacion" title="Alfie Salvacion">
-					<img id="justine-pic" src="images/justine.png" alt="Justine Navaja" title="Justine Navaja">
-					<img id="arje-pic" src="images/arje.png" alt="Arjemariel Requina" title="Arjemariel Requina">
-					<img id="mon-pic" src="images/mon.png" alt="Monique Meguillo" title="Monique Meguillo">
-					<img id="heidi-pic" src="images/heidi.png" alt="Heidi Chiu" title="Heidi Chiu">
-					<img id="kelly-pic" src="images/kelly.png" alt="Kelly Marinduque" title="Kelly Marinduque">
-				</center>
-			</div>
 		</div>
 	</div>
 
@@ -428,44 +401,37 @@
 
 	<!-- DIV FIVE -->
 
-	<div class="div-five" id="rickandmorty">
-		<div class="div5-contents">
-			<center>
-				<h1 class="h1-five"> Rick and Morty </h1>
-				<img class="ram-pic" src="images/rickandmorty.png" alt="Rick and Morty" width="100px">
+	<div class="container-div" id="rickandmorty">
+		<center>
+			<h1 class="h1-five"> Rick and Morty </h1>
+			<img class="ram-pic" src="images/rickandmorty.png" alt="Rick and Morty" width="100px">
 
-				<div id="ram-gallery">
+			<div id="ram-gallery">
 
-					<img class="ram-pic-gal" src="images/ram3.png" alt="Rick and Morty">
-					<img class="ram-pic-gal" src="images/ram5.png" alt="Rick and Morty">
-					<img class="ram-pic-gal" src="images/ram8.png" alt="Rick and Morty">
-					<img class="ram-pic-gal" src="images/ram10.png" alt="Rick and Morty">
-					<img class="ram-pic-gal" src="images/ram11.png" alt="Rick and Morty">
-					<img class="ram-pic-gal" src="images/ram12.png" alt="Rick and Morty">
-					<img class="ram-pic-gal" src="images/ram21.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram3.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram5.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram8.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram10.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram11.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram12.png" alt="Rick and Morty">
+				<img class="ram-pic-gal" src="images/ram21.png" alt="Rick and Morty">
 
-				</div>
-			</center>
-		</div>
+			</div>
+		</center>
 	</div>
 
 
 	<!-- DIV SIX -->
-	<div class="div-six" id="miscellaneous">
-		<div class="div6-contents">
-			<center>
-				<p id="misc"> "And the ones who come close but do not love us, <br>
-				cannot love us, I'd say to let them pass through <br>
-				painlessly, rivers of dust through a window. <br>
-				They have nothing to do with you." <br>
-				<br>
-				<br>
-				- Naomi Shihab Nye </p>
-			</center>
-
-
-
-		</div>
+	<div class="container-div" id="miscellaneous">
+		<center>
+			<p id="misc"> "And the ones who come close but do not love us, <br>
+			cannot love us, I'd say to let them pass through <br>
+			painlessly, rivers of dust through a window. <br>
+			They have nothing to do with you." <br>
+			<br>
+			<br>
+			- Naomi Shihab Nye </p>
+		</center>
 	</div>
 
 </body>
